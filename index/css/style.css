@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body{
-    width: 1400px;
+.wrapper{
+    max-width: 1920px;
     font-family: 'Roboto', sans-serif;
 }
 a{
@@ -17,17 +17,23 @@ a:hover {
 header{
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    background-color: rgb(254, 228, 228);
+    background-color: rgb(255, 212, 212);
     padding: 10px 50px;
 }
-nav{
+.title {
     display: flex;
-    justify-content: space-between;
 }
 .icon_belarus {
     width: 60px;
+    margin-right: 20px;
 }
+nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 
 
@@ -41,9 +47,135 @@ section{
     display: flex;
     justify-content: space-around;
 }
+.column{
+    border: 4px solid rgb(255, 212, 212);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
 .center {
     margin: 0 100px;
+    margin-top: 40px;
 }
 .description__img{
     width: 250px;
+}
+
+
+
+.towns {
+    position: relative;
+    background: url('/index/img/map') no-repeat 50%;
+    background-size: contain;
+    height: 1100px;
+}
+.town{
+    visibility: hidden;
+    position: absolute;
+}
+.town span{
+    visibility: visible;
+    font-size: 42px;
+    font-weight: 600;
+}
+.town:hover {
+    visibility: visible;
+}
+.description_town{
+    margin: auto;
+    padding: 10px 30px;
+    margin: 30px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.vitebsk{
+    left: 50%;
+    bottom: 68%;
+}
+.hrodna{
+    left: 29%;
+    bottom: 46%;
+}
+.minsk{
+    left: 45%;
+    bottom: 51%;
+}
+.mogilev{
+    left: 61%;
+    bottom: 48%;
+}
+.brest{
+    left: 33%;
+    bottom: 29%;
+}
+.homiel{
+    left: 55%;
+    bottom: 27%;
+}
+
+
+
+.natural{
+    position: relative;
+    background: url('/index/img/forest.png') no-repeat;
+    background-size: contain;
+    height: 1100px;
+    padding:0 -50px;
+}
+.animal{
+    visibility: hidden;
+}
+.animal img{
+    visibility: visible;
+    position: absolute;
+}
+.animal:hover {
+    visibility: visible;
+}
+.lynx img{
+    width: 13vw;
+    left: 26%;
+    bottom: 51%;
+}
+.eagle img{
+    width: 11vw;
+    left: 63%;
+    bottom: 90%;
+}
+.stork img{
+    width: 17vw;
+    left: 27%;
+    bottom: 82%;
+}
+.bear img{
+    width: 20vw;
+    left: 72%;
+    bottom: 51%;
+}
+.bison img{
+    width: 20vw;
+    left: 50%;
+    bottom: 53%;
+}
+
+.description_animal {
+    margin: auto;
+    padding: 10px 30px;
+    margin: 30px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
 }

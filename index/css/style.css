@@ -45,17 +45,17 @@ section{
 }
 .row {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
 }
 .column{
+    display: block;
     border: 4px solid rgb(255, 212, 212);
     border-radius: 20px;
     padding: 20px;
-    margin-top: 40px;
-}
-.center {
-    margin: 0 100px;
-    margin-top: 40px;
+    max-width: 300px;
 }
 .description__img{
     width: 250px;
@@ -64,18 +64,44 @@ section{
 
 
 .towns {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    background: url('/index/img/map') no-repeat 50%;
-    background-size: contain;
-    height: 1100px;
+}
+.towns h2 {
+    z-index: 20;
+}
+.storks{
+    position: absolute;
+    width: 28vw;
+    top: 8%;
+}
+.cornflower {
+    position: absolute;
+    width: 20vw;
+    left: 77%;
+    bottom: 1%;
+}
+.bg_map {
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
+    height: auto;
+}
+.bg_map img {
+    width: 85%;
+    margin: -130px 0;
 }
 .town{
     visibility: hidden;
     position: absolute;
 }
+.img_town {
+    width: 180px;
+}
 .town span{
     visibility: visible;
-    font-size: 42px;
+    font-size: 2.5vw;
     font-weight: 600;
 }
 .town:hover {
@@ -83,13 +109,13 @@ section{
 }
 .description_town{
     margin: auto;
-    padding: 10px 30px;
+    padding: 20px 30px;
     margin: 30px;
     position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 220px;
     width: 300px;
     background-color: white;
     border: 3px solid black;
@@ -97,85 +123,120 @@ section{
 }
 .vitebsk{
     left: 50%;
-    bottom: 68%;
+    bottom: 67%;
 }
 .hrodna{
-    left: 29%;
-    bottom: 46%;
+    left: 24%;
+    bottom: 41%;
 }
 .minsk{
     left: 45%;
     bottom: 51%;
 }
 .mogilev{
-    left: 61%;
-    bottom: 48%;
+    left: 65%;
+    bottom: 45%;
 }
 .brest{
-    left: 33%;
-    bottom: 29%;
+    left: 25%;
+    bottom: 22%;
 }
 .homiel{
     left: 55%;
-    bottom: 27%;
+    bottom: 20%;
+}
+.description_town h3 {
+    font-size: 36px;
+    margin: 0;
+}
+.gerb {
+    width: 70px;
 }
 
 
 
 .natural{
     position: relative;
-    background: url('/index/img/forest.png') no-repeat;
-    background-size: contain;
-    height: 1100px;
-    padding:0 -50px;
 }
-.animal{
-    visibility: hidden;
+.bg_forest {
+    max-width: 1920px;
+    height: auto;
 }
-.animal img{
-    visibility: visible;
+.bear img{visibility: visible;}
+.bison img{visibility: visible;}
+.eagle img{visibility: visible;}
+.lynx img{visibility: visible;}
+.stork img{visibility: visible;}
+.bear:hover{visibility: visible;}
+.bison:hover{visibility: visible;}
+.eagle:hover{visibility: visible;}
+.lynx:hover{visibility: visible;}
+.stork:hover{visibility: visible;}
+.lynx {
     position: absolute;
-}
-.animal:hover {
-    visibility: visible;
-}
-.lynx img{
-    width: 13vw;
+    visibility: hidden;
+    width: 11vw;
     left: 26%;
-    bottom: 51%;
+    bottom: 0;
 }
-.eagle img{
+.eagle {
+    position: absolute;
+    visibility: hidden;
     width: 11vw;
     left: 63%;
-    bottom: 90%;
+    top: 1%;
 }
-.stork img{
+.stork {
+    position: absolute;
+    visibility: hidden;
     width: 17vw;
     left: 27%;
-    bottom: 82%;
+    top: 1%;
 }
-.bear img{
+.bear {
+    position: absolute;
+    visibility: hidden;
     width: 20vw;
     left: 72%;
-    bottom: 51%;
+    bottom: 1%;
 }
-.bison img{
-    width: 20vw;
+.bison {
+    position: absolute;
+    visibility: hidden;
+    width: 16vw;
     left: 50%;
-    bottom: 53%;
+    bottom: 3%;
 }
-
 .description_animal {
     margin: auto;
     padding: 10px 30px;
     margin: 30px;
     position: absolute;
     z-index: 10;
-    top: 0;
-    left: 0;
-    height: 200px;
-    width: 300px;
+    height: 24vh;
+    width: 17vw;
     background-color: white;
     border: 3px solid black;
     border-radius: 20px;
+    font-size: 1vw;
+}
+.bison .description_animal{
+    top: -25vw;
+    left: -47vw;
+}
+.bear .description_animal{
+    top: -23vw;
+    left: -67vw;
+}
+.eagle .description_animal{
+    top: 2vw;
+    left: -59vw;
+}
+.stork .description_animal{
+    top: 2vw;
+    left: -26vw;
+}
+.lynx .description_animal{
+    top: -30vw;
+    left: -25vw;
 }
